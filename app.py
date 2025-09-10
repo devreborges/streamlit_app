@@ -46,7 +46,7 @@ st.markdown("""
 # 📄 Carregar os dados
 uploaded_file = st.file_uploader("📁 Envie a base de dados (.xlsx)", type=["xlsx"])
 if uploaded_file is None:
-    st.warning("Por favor, envie o arquivo 'base_joinvile_tratada.xlsx' para continuar.")
+    st.warning("Por favor, envie o arquivo base para continuar.")
     st.stop()
 
 df = pd.read_excel(uploaded_file)
