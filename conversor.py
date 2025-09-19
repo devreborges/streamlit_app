@@ -28,6 +28,6 @@ excel_data = to_excel(df)
 st.download_button(
     label="📥 Baixar como Excel",
     data=excel_data,
-    file_name="tabela_bi_faturamento.xlsx",
+    file_name=f"{uploaded_file}.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
