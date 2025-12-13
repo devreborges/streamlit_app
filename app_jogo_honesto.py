@@ -59,12 +59,12 @@ if st.button("🚀 Iniciar Simulação"):
         for _ in range(12):
             face = random.choice(dado_d4)
             dice_box.markdown(f"<h1 style='text-align:center; font-size:60px;'>{face}</h1>", unsafe_allow_html=True)
-            time.sleep(0.2)
+            time.sleep(0.6)
 
         # Rolagem real da rodada
         rolagem_aleatoria = random.choice(dado_d4)
         dice_box.markdown(f"<h1 style='text-align:center; font-size:70px;'>🎯 {rolagem_aleatoria}</h1>", unsafe_allow_html=True)
-        time.sleep(0.3)
+        time.sleep(1)
 
         # Resultado da rodada
         vencedores = []
