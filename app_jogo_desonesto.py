@@ -84,7 +84,7 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
                 f"<h1 style='text-align:center; font-size:60px;'>{face}</h1>",
                 unsafe_allow_html=True
             )
-            time.sleep(0.4)
+            time.sleep(1)
 
         # -------------------------------
         # LÓGICA FRAUDADA
@@ -138,7 +138,7 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
             'Saldo da banca': saldo_banca
         })
 
-        time.sleep(1.5)
+        time.sleep(2)
 
     # ----------------------------------
     # Resultado final
