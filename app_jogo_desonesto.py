@@ -115,8 +115,8 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
         for index, escolha in enumerate(escolhas_da_rodada):
             if escolha == rolagem_aleatoria:
-                df_jogadores.loc[index, 'Pontuação'] += 3
-                saldo_banca -= 3
+                df_jogadores.loc[index, 'Pontuação'] += 2
+                saldo_banca -= 2
                 vencedores.append(df_jogadores.loc[index, 'Jogadores'])
             else:
                 df_jogadores.loc[index, 'Pontuação'] -= 1
@@ -174,4 +174,5 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
+
 
