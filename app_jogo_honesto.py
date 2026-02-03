@@ -6,7 +6,7 @@ import altair as alt  # ✅ Usaremos Altair para visualização
 
 st.set_page_config(page_title="Simulação de Jogo com Dado 🐸🐋🐱🐮", layout="centered")
 
-st.title("🐸🐋🎲 CassinoMAT 🎲🐱🐮")
+st.title("🐸🐋🎲 Cassino MAT 🎲🐱🐮")
 
 # Entrada de quantidade de jogadores
 quantidade_de_jogadores = st.number_input(
@@ -142,3 +142,4 @@ if st.button("🚀 Iniciar Simulação"):
 else:
     st.info("🕹️ Configure o número de jogadores e clique em **Iniciar Simulação** para começar o jogo.")
     
+
