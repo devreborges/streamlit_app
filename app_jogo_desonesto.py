@@ -1,7 +1,6 @@
 import random
 import time
 from collections import Counter
-
 import pandas as pd
 import streamlit as st
 import altair as alt
@@ -163,7 +162,11 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
         .mark_line(point=True)
         .encode(
             x=alt.X('Rodada:Q', title='Rodada'),
-            y=alt.Y('Saldo da banca:Q', title='Saldo da Banca'),
+            y=alt.Y(
+                'Saldo da banca:Q',
+                title='Saldo da Banca',
+                axis=alt.Axis(tickMinStep=2)
+            ),
             tooltip=['Rodada', 'Saldo da banca']
         )
         .properties(height=400)
@@ -174,5 +177,4 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
-
 
