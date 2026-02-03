@@ -43,7 +43,7 @@ nomes_jogadores = [f"Jogador {i}" for i in range(1, quantidade_de_jogadores + 1)
 pontuacao_inicial = 20
 saldo_banca = 100
 
-dado_d4 = ['🐸', '🐋', '🐱', '🦒']
+dado_d4 = ['🐸', '🐋', '🐱', '🐮']
 
 # DataFrame de jogadores
 
@@ -177,5 +177,6 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
+
 
 
