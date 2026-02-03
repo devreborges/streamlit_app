@@ -14,7 +14,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🎲 CassinoMAT – Modo FRAUDADO 🧠🐍🐒🦁🦒")
+st.title("🎲 CassinoMAT – Modo FRAUDADO 🧠🐸🐋🐱🐮")
 st.caption("Simulação com dado viciado: a banca sempre tenta ganhar")
 
 # ----------------------------------
@@ -44,7 +44,7 @@ nomes_jogadores = [f"Jogador {i}" for i in range(1, quantidade_de_jogadores + 1)
 pontuacao_inicial = 20
 saldo_banca = 100
 
-dado_d4 = ['🐍', '🐒', '🦁', '🦒']
+dado_d4 = ['🐸', '🐋', '🐱', '🦒']
 
 # DataFrame de jogadores
 
@@ -116,7 +116,7 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
         for index, escolha in enumerate(escolhas_da_rodada):
             if escolha == rolagem_aleatoria:
                 df_jogadores.loc[index, 'Pontuação'] += 3
-                saldo_banca -= 4
+                saldo_banca -= 3
                 vencedores.append(df_jogadores.loc[index, 'Jogadores'])
             else:
                 df_jogadores.loc[index, 'Pontuação'] -= 1
@@ -174,3 +174,4 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
+
