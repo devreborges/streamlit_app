@@ -4,6 +4,7 @@ from collections import Counter
 import pandas as pd
 import streamlit as st
 import altair as alt
+import streamlit as st
 
 # ----------------------------------
 # Configuração da página
@@ -43,7 +44,7 @@ nomes_jogadores = [f"Jogador {i}" for i in range(1, quantidade_de_jogadores + 1)
 pontuacao_inicial = 20
 saldo_banca = 100
 
-dado_d4 = ['🐸', '🐋', '🐱', '🐮']
+dado_d4 = ['🐸', '🐋', '🐱', '🦒']
 
 # DataFrame de jogadores
 
@@ -153,12 +154,16 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
     # ----------------------------------
     # Gráfico do saldo da banca
     # ----------------------------------
-    df_hist = pd.DataFrame(historico)
+
+    # Histórico completo das rodadas
+    st.markdown("### 📜 Histórico das Rodadas")
+    df_historico = pd.DataFrame(historico)
+    st.dataframe(df_historico, use_container_width=True)
 
     st.markdown("### 📈 Evolução do Saldo da Banca")
 
     chart = (
-        alt.Chart(df_hist)
+        alt.Chart(df_historico)
         .mark_line(point=True)
         .encode(
             x=alt.X('Rodada:Q', title='Rodada'),
@@ -177,6 +182,5 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
-
 
 
