@@ -1,7 +1,7 @@
 import random
 import time
 from collections import Counter
-import matplotlib.pyplot as plt
+
 import pandas as pd
 import streamlit as st
 import altair as alt
@@ -158,36 +158,23 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
     st.markdown("### 📈 Evolução do Saldo da Banca")
 
-    fig, ax = plt.subplots(figsize=(10, 4))
-
-    # Plot
-    ax.plot(
-        df_hist['Rodada'],
-        df_hist['Saldo da banca'],
-        marker='o'
+    chart = (
+        alt.Chart(df_hist)
+        .mark_line(point=True)
+        .encode(
+            x=alt.X('Rodada:Q', title='Rodada'),
+            y=alt.Y(
+                'Saldo da banca:Q',
+                title='Saldo da Banca',
+                axis=alt.Axis(tickMinStep=2)
+            ),
+            tooltip=['Rodada', 'Saldo da banca']
+        )
+        .properties(height=400)
+        .interactive()
     )
 
-    # 🔢 Controle dos eixos
-    ax.set_xticks(np.arange(
-        df_hist['Rodada'].min(),
-        df_hist['Rodada'].max() + 1,
-        1
-    ))
-
-    ax.set_yticks(np.arange(
-        df_hist['Saldo da banca'].min(),
-        df_hist['Saldo da banca'].max() + 2,
-        2
-    ))
-
-    # Labels
-    ax.set_xlabel('Rodada')
-    ax.set_ylabel('Saldo da Banca')
-
-    # Grid opcional (fica bonito e legível)
-    ax.grid(True, linestyle='--', alpha=0.5)
-
-    st.pyplot(fig)
+    st.altair_chart(chart, use_container_width=True)
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
