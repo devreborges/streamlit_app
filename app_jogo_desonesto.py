@@ -135,6 +135,7 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
         historico.append({
             'Rodada': k,
             'Face escolhida pela banca': rolagem_aleatoria,
+            "Vencedores": ', '.join(vencedores) if vencedores else "Nenhum",
             'Saldo da banca': saldo_banca
         })
 
