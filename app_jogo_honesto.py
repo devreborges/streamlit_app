@@ -4,9 +4,9 @@ import streamlit as st
 import time
 import altair as alt  # ✅ Usaremos Altair para visualização
 
-st.set_page_config(page_title="Simulação de Jogo com Dado 🐍🐒🦁🦒", layout="centered")
+st.set_page_config(page_title="Simulação de Jogo com Dado 🐸🐋🐱🐮", layout="centered")
 
-st.title("🐍🐒🎲 CassinoMAT 🎲🦁🦒")
+st.title("🐸🐋🎲 CassinoMAT 🎲🐱🐮")
 
 # Entrada de quantidade de jogadores
 quantidade_de_jogadores = st.number_input(
@@ -26,7 +26,7 @@ saldo_banca = 100
 rodadas = 10
 
 # Dado com emojis
-dado_d4 = ['🐍', '🐒', '🦁', '🦒']
+dado_d4 = ['🐸', '🐋', '🐱', '🐮']
 
 # Criando o DataFrame inicial
 df_jogadores = pd.DataFrame({
