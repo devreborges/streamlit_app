@@ -1,7 +1,6 @@
 import random
 import time
 from collections import Counter
-
 import pandas as pd
 import streamlit as st
 import altair as alt
@@ -178,4 +177,5 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
 else:
     st.info("Configure os parâmetros e clique em **Iniciar Simulação FRAUDADA**")
+
 
