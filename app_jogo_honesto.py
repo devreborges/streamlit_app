@@ -71,7 +71,7 @@ if st.button("🚀 Iniciar Simulação"):
         for index, escolha in enumerate(escolhas_da_rodada):
             if escolha == rolagem_aleatoria:
                 df_jogadores.loc[index, 'Pontuação'] += 2
-                saldo_banca -= 1
+                saldo_banca -= 2
                 vencedores.append(df_jogadores.loc[index, 'Jogadores'])
             else:
                 df_jogadores.loc[index, 'Pontuação'] -= 1
