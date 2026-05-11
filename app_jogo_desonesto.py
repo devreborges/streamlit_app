@@ -41,7 +41,7 @@ rodadas = st.slider(
 # ----------------------------------
 nomes_jogadores = [f"Jogador {i}" for i in range(1, quantidade_de_jogadores + 1)]
 
-pontuacao_inicial = 20
+pontuacao_inicial = rodadas
 saldo_banca = 100
 
 dado_d4 = ['🐸', '🐋', '🐱', '🐮']
