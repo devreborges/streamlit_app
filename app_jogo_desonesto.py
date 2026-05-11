@@ -59,7 +59,7 @@ df_jogadores = pd.DataFrame({
 if st.button("🚀 Iniciar Simulação FRAUDADA"):
 
     st.markdown("## 🎬 Iniciando o jogo...")
-    time.sleep(1)
+    time.sleep(0.5)
 
     historico = []
 
@@ -139,7 +139,7 @@ if st.button("🚀 Iniciar Simulação FRAUDADA"):
             'Saldo da banca': saldo_banca
         })
 
-        time.sleep(2)
+        time.sleep(1)
 
     # ----------------------------------
     # Resultado final
