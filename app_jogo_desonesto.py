@@ -22,7 +22,7 @@ st.caption("Simulação com dado viciado: a banca sempre tenta ganhar")
 # ----------------------------------
 quantidade_de_jogadores = st.number_input(
     "Quantidade de jogadores",
-    min_value=3,
+    min_value=5,
     max_value=20,
     value=5,
     step=1
